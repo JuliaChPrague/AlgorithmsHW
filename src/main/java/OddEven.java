@@ -1,3 +1,5 @@
+import com.sun.jdi.Value;
+
 public class OddEven {
 
     //Task 1 Создать алгоритм OddEven, который принимает на вход целое число, возвращает “Odd”,
@@ -9,20 +11,21 @@ public class OddEven {
 //            222222 →  “Even”
 //            2147483647 + 1 →  “Undefined”
 
-    public int OddEven(int a) {
-        int Odd = 0;
-        int Even = 0;
-        String text = "Undefined";
-        if (a > 0 && a % 2 != 0) {
-            return Odd;
+    public String oddEvenAlgorithm(long a) {
+        String odd = "Odd";
+        String even = "Even";
+        String undefined = "Undefined";
+
+        if (a <= 2147483647L && a >= -2147483647L) {
+            if (a % 2 == 0) {
+
+                return even;
+            } else {
+
+                return odd;
+            }
         }
-        if (a >= 0 && a % 2 == 0) {
-            return Even;
-        } else {
-            System.out.println(text);
-        }
-        return 0;
+
+        return undefined;
     }
-
-
 }
