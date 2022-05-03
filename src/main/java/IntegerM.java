@@ -6,6 +6,7 @@ public class IntegerM {
 //    If M is only multiple of 5 and not of 3 then return "Poor Number"
 //    If M doesn't satisfy any of the above conditions then return "-1"
 
+
     public String integerM(int m) {
         String out = " ";
         if (m % 3 == 0 && m % 5 == 0) {

@@ -11,15 +11,21 @@ public class OddEven {
 //            222222 →  “Even”
 //            2147483647 + 1 →  “Undefined”
 
-    public String oddEvenAlgorithm(int a) {
+    public String oddEvenAlgorithm(long a) {
+        String odd = "Odd";
+        String even = "Even";
+        String undefined = "Undefined";
 
-        if (a % 2 != 0) {
-           return "Odd";
+        if (a <= 2147483647L && a >= -2147483647L) {
+            if (a % 2 == 0) {
+
+                return even;
+            } else {
+
+                return odd;
+            }
         }
-        if (a % 2 == 0) {
-            return "Even";
-        } else {
-            return "Undefined";
-        }
+
+        return undefined;
     }
 }

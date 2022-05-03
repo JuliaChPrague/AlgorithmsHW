@@ -5,7 +5,7 @@ public class OddEvenTest {
 
     @Test
     public void testOddEvenHappyPathOdd() {
-        int a = -345;
+        long a = -345;
         String expectedResult = "Odd";
 
         OddEven oddev = new OddEven();
@@ -14,9 +14,21 @@ public class OddEvenTest {
         Assertions.assertEquals(expectedResult, actualResult);
 
     }
+
+    @Test
+    public void testOddEvenHappyPathOEvenNegative() {
+        long a = -22;
+        String expectedResult = "Even";
+
+        OddEven oddev = new OddEven();
+        String actualResult = oddev.oddEvenAlgorithm(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
     @Test
     public void testOddEvenHappyPathNull() {
-        int a = 0;
+        long a = 0;
         String expectedResult = "Even";
 
         OddEven oddev = new OddEven();
@@ -28,20 +40,19 @@ public class OddEvenTest {
 
     @Test
     public void testOddEvenHappyPathEven() {
-        int a = 222222;
+        long a = 222222;
         String expectedResult = "Even";
 
         OddEven oddev = new OddEven();
         String actualResult = oddev.oddEvenAlgorithm(a);
 
         Assertions.assertEquals(expectedResult, actualResult);
-
     }
 
     @Test
-    public void testOddEvenHappyPathFail() {
-        int a = 2147483647 + 1;
-        String expectedResult = "Undefined";
+    public void testOddEvenHappyPathOddPositive() {
+        long a = 23;
+        String expectedResult = "Odd";
 
         OddEven oddev = new OddEven();
         String actualResult = oddev.oddEvenAlgorithm(a);
@@ -49,4 +60,25 @@ public class OddEvenTest {
         Assertions.assertEquals(expectedResult, actualResult);
 
     }
+    @Test
+    public void testOddEvenPositiveUndefined() {
+        long a = 2147483648L;
+        String expectedResult = "Undefined";
+
+        OddEven oddev = new OddEven();
+        String actualResult = oddev.oddEvenAlgorithm(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+    @Test
+    public void testOddEvenNegativeUndefined() {
+        long a = - 2147483649L;
+        String expectedResult = "Undefined";
+
+        OddEven oddev = new OddEven();
+        String actualResult = oddev.oddEvenAlgorithm(a);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
 }
