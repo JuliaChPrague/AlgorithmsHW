@@ -7,13 +7,15 @@ public class SumArray {
 //    {-7, -3} → -10
 
     public int sumArray(int[] array) {
+        if (array.length == 0) {
+
+            return 0;
+        }
         int sum = 0;
-        if(array.length != 0) {
             for (int i = 0; i < array.length; i++) {
                 sum += array[i];
             }
-        }
+
         return sum;
     }
-
 }

@@ -51,6 +51,4 @@ public class IntegerMTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
-
-
 }

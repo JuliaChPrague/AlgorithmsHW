@@ -17,10 +17,8 @@ public class AreNumbersEqual {
         }
         if (a < b) {
             return - 1;
-        }
-        if (a > b) {
+        } else {
             return 1;
         }
-        return a;
     }
 }

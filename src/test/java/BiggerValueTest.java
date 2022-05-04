@@ -8,7 +8,7 @@ public class BiggerValueTest {
 //    Expected Result = 9999
 
     @Test
-    public void biggerValueHappyPathPositiveNumbers() {
+    public void testBiggerValueHappyPathPositiveNumbers() {
         int a = 3333;
         int b = 9999;
         int expectedResult = 9999;
@@ -19,7 +19,7 @@ public class BiggerValueTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
     @Test
-    public void biggerValueHappyPathSameNumbers() {
+    public void testBiggerValueHappyPathSameNumbers() {
         int a = 9999;
         int b = 9999;
         int expectedResult = 0;

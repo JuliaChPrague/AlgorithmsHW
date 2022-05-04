@@ -4,11 +4,13 @@ public class IsPositiveNumber {
 //    параметр больше или равен нулю, и возвращает false, если параметр меньше 0.
 //    Проверьте работу метода на числах 555, 0 и -555.
 
-    public boolean IsPositiveNumber(int a) {
-        if (a >= 0) {
-            return true;
+    public boolean IsPositiveNumber(int x) {
+        boolean a = false;
+        if (x >= 0) {
+            a = true;
         } else {
-            return false;
+            a = false;
         }
+        return a;
     }
 }

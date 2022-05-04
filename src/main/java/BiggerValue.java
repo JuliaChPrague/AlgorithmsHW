@@ -7,15 +7,16 @@ public class BiggerValue {
 
     public int biggerValue(int a, int b) {
         int max;
-        if (a != b) {
+        if (a == b) {
+
+            return 0;
+        }
             if (a > b) {
                 max = a;
-                return max;
             } else {
                 max = b;
-                return max;
             }
+            return max;
         }
-        return 0;
     }
-}
+

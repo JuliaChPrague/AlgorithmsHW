@@ -10,12 +10,16 @@ public class IntegerM {
     public String integerM(int m) {
         String out = " ";
         if (m % 3 == 0 && m % 5 == 0) {
+
             return out = "Good Number";
-        } else if (m % 3 == 0) {
+        } else if (m % 3 == 0 && m % 5 != 0) {
+
             return out = "Bad Number";
-        } else if (m % 5 == 0) {
+        } else if (m % 3 != 0 && m % 5 == 0) {
+
             return out = "Poor Number";
         } else {
+
             return out = "- 1";
         }
     }
