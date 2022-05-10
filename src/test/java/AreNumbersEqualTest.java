@@ -10,7 +10,7 @@ public class AreNumbersEqualTest {
         int expectedResult = 0;
 
         AreNumbersEqual ane = new AreNumbersEqual();
-        int actualResult = ane.areNumbersEqual(a, b);
+        int actualResult = ane.areNumbersEqualAlgorithm(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
@@ -22,7 +22,7 @@ public class AreNumbersEqualTest {
         int expectedResult = - 1;
 
         AreNumbersEqual ane = new AreNumbersEqual();
-        int actualResult = ane.areNumbersEqual(a, b);
+        int actualResult = ane.areNumbersEqualAlgorithm(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
@@ -33,7 +33,7 @@ public class AreNumbersEqualTest {
         int expectedResult = 1;
 
         AreNumbersEqual ane = new AreNumbersEqual();
-        int actualResult = ane.areNumbersEqual(a, b);
+        int actualResult = ane.areNumbersEqualAlgorithm(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }

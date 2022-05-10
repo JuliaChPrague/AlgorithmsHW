@@ -11,7 +11,7 @@ public class AreNumbersEqual {
 //            89, -89
 //    Expected result: 1
 
-    public int areNumbersEqual(int a, int b) {
+    public int areNumbersEqualAlgorithm(int a, int b) {
         if (a == b){
             return 0;
         }

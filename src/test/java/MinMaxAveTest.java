@@ -23,8 +23,8 @@ public class MinMaxAveTest {
         int[] array = {};
         int indexA = 2;
         int indexB = 6;
+        int[] expectedResult = new int[]{};
 
-        int[] expectedResult = {};
         MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(array, indexA, indexB);
 
@@ -52,7 +52,7 @@ public class MinMaxAveTest {
         int indexA = 6;
         int indexB = 2;
 
-        int[] expectedResult = {3, 7, 5};
+        int[] expectedResult = {};
         MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(array, indexA, indexB);
 
@@ -77,10 +77,10 @@ public class MinMaxAveTest {
     public void testMinMaxAveIndexNegative(){
 
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
-        int indexA = 2;
-        int indexB = - 2;
+        int indexA = -2 ;
+        int indexB = 6;
 
-        int[] expectedResult = {};
+        int[] expectedResult = new int[]{};
         MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(array, indexA, indexB);
 
@@ -88,13 +88,13 @@ public class MinMaxAveTest {
     }
 
     @Test
-    public void testMinMaxAveIndexBBiggerThanArr(){
+    public void testMinMaxAveIndexBBiggerThanArrNegative(){
 
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
         int indexA = 2;
         int indexB = 8;
 
-        int[] expectedResult = {};
+        int[] expectedResult = new int[]{};
         MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(array, indexA, indexB);
 
@@ -108,6 +108,20 @@ public class MinMaxAveTest {
         int indexB = 0;
 
         int[] expectedResult = {1, 1, 1};
+        MinMaxAve mma = new MinMaxAve();
+        int[] actualResult = mma.minMaxAve(array, indexA, indexB);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testMinMaxAveIndeAEquelsIndexB(){
+
+        int[] array = {2, 3, 7, 10};
+        int indexA = 3;
+        int indexB = 3;
+
+        int[] expectedResult = {10, 10, 10};
         MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(array, indexA, indexB);
 
